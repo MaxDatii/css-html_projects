@@ -3,14 +3,14 @@ h1 {
   }
 
   .container {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     padding: 10px 0;
   }
 
   .marker {
     width: 200px;
     height: 25px;
-    margin: auto;
+    margin: 10 px auto;
   }
 
   .cap {
@@ -41,5 +41,5 @@ h1 {
 
   .blue {
     background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
-    box-shadow: 0 0 20px 0 hsla(223,59%,31%,0.8);
+    box-shadow: 0 0 20px 0 blue;
   }
