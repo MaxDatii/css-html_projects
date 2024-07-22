@@ -10,11 +10,11 @@
     <p id="description">Thank you for your time to help us improve the platform</p>
     <form id="survey-form">
       <fieldset>
-        <label id="name-label">Full Name: <input id="name" name="name" type="text" required /></label>
-        <label id="email-label">Email: <input id="email" name="email" type="email" required /></label>
-        <label id="number-label">Age: <input id="number" name="number" type="number" min="13" max="120" required /></label>
+        <label id="name-label">Full Name: <input id="name" name="name" type="text" required placeholder="Enter your Name"/></label>
+        <label id="email-label">Email: <input id="email" name="email" type="email" required placeholder="Enter your Email"/></label>
+        <label id="number-label">Age: <input id="number" name="number" type="number" min="13" max="120" required placeholder="Age"/></label>
         <label id="role-lable">Which option best describes your current role?
-          <select id="role" name="role">
+          <select id="dropdown" name="role">
             <option value="">(select current role)</option>
             <option value="1">Student</option>
             <option value="2">Full Time Job</option>
@@ -24,7 +24,27 @@
           </select>
         </label>
       </fieldset>
-<!-- FINISHED HERE -->
+      <fieldset>
+        <legend>Account type (required)</legend>
+        <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" checked value="personal"/> Personal</label>
+        <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" value="business"/> Business</label>
+      </fieldset>
+      <fieldset>
+        <legend>How did you hear about us?</legend>
+        <label for="instagram"><input class="inline" id="instagram" type="checkbox" value="instagram" name="instagram"/>Saw an AD on Instagram</label>
+        <label for="friend"><input class="inline" id="friend" type="checkbox" value="friend" name="friend"/>From a friend or family member</label>
+         <label for="media"><input class="inline" id="media" type="checkbox" value="media" name="media"/>Saw an AD on other social media</label>
+          <label for="other"><input class="inline" id="other" type="checkbox" value="other" name="other" checked/>Other</label>
+      </fieldset>
+      <fieldset>
+        <label for="bio">How we can improve our service?
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Please provide your feedback here..."></textarea>
+        </label>
+      </fieldset>
+      <label for="terms-and-conditions">
+        <input class="inline" id="terms-and-conditions" type="checkbox" required value="terms" name="terms-and-conditions" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+      </label>
+      <input class="submitbutton" id="submit" type="submit" value="Submit" />
     </form>
   </body>
 </html>
