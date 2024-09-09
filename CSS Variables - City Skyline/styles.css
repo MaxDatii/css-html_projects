@@ -3,6 +3,8 @@
   --building-color2: #66cc99;
   --building-color3: #cc6699;
   --building-color4: #538cc6;
+  --window-color1: black;
+  --window-color2: #8cd9b3;
 }
 
 * {
@@ -26,6 +28,7 @@ body {
   top: 0;
 }
 
+/* BACKGROUND BUILDINGS - "bb" stands for "background building" */
 .bb1 {
   width: 10%;
   height: 70%;
@@ -36,26 +39,31 @@ body {
 
 .bb1a {
   width: 70%;
-  height: 10%;
-  background-color: var(--building-color1);
 }
-
+  
 .bb1b {
   width: 80%;
-  height: 10%;
-  background-color: var(--building-color1);
 }
-
+  
 .bb1c {
   width: 90%;
-  height: 10%;
-  background-color: var(--building-color1);
 }
 
 .bb1d {
   width: 100%;
   height: 70%;
-  background-color: var(--building-color1);
+  background: linear-gradient(
+      var(--building-color1) 50%,
+      var(--window-color1)
+    );
+}
+
+.bb1-window {
+  height: 10%;
+  background: linear-gradient(
+      var(--building-color1),
+      var(--window-color1)
+    );
 }
 
 .bb2 {
@@ -63,7 +71,16 @@ body {
   height: 50%;
   background-color: var(--building-color2);
 }
-
+.bb2b {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      var(--building-color2),
+      var(--building-color2) 6%,
+      var(--window-color2) 6%,
+      var(--window-color2) 9%
+    );
+}
 .bb3 {
   width: 10%;
   height: 55%;
@@ -76,6 +93,7 @@ body {
   background-color: var(--building-color4);
 }
 
+/* FOREGROUND BUILDINGS - "fb" stands for "foreground building" */
 .fb1 {
   width: 10%;
   height: 60%;
@@ -93,17 +111,23 @@ body {
   height: 35%;
   background-color: var(--building-color1);
 }
+  
 .fb4 {
   width: 8%;
   height: 45%;
   background-color: var(--building-color1);
+  position: relative;
+  left: 10%;
 }
 
 .fb5 {
   width: 10%;
   height: 33%;
   background-color: var(--building-color2);
+  position: relative;
+  right: 10%;
 }
+
 .fb6 {
   width: 9%;
   height: 38%;
