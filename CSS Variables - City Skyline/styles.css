@@ -8,10 +8,11 @@
   --window-color3: #d98cb3;
   --window-color4: #8cb3d9;
 }
+
 * {
-  border: 1px solid black;
   box-sizing: border-box;
 }
+
 body {
   height: 100vh;
   margin: 0;
@@ -39,7 +40,14 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
-
+.sky {
+  background: radial-gradient(
+      #ffcf33,
+      #ffcf33 20%,
+      #ffff66 21%,
+      #bbeeff 100%
+    );
+}
 /* BACKGROUND BUILDINGS - "bb" stands for "background building" */
 .bb1 {
   width: 10%;
@@ -285,4 +293,3 @@ body {
       var(--window-color3) 30%
     );
 }
-    
