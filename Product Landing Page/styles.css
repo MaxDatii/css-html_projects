@@ -1,0 +1,99 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  font-family: 'Baskervville', serif;
+  color: linen;
+  background-color: rgb(20, 30, 40);
+}
+
+#nav-bar {
+  position: fixed; /* Stays fixed in the viewport */
+  top: 0; /* Aligns the nav-bar to the top */
+  left: 0; /* Aligns the nav-bar to the left */
+  width: 100%; /* Ensures the nav-bar spans the full width */
+  z-index: 1000; /* Keeps it above other elements */
+  background-color: #fff; /* Optional: Give it a background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+}
+
+h1 {
+  font-family: 'Anton', sans-serif;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: linen;
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
+  row-gap: 3rem;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+hr {
+  margin: 1.5rem 0;
+  border: 1px solid rgba(120, 120, 120, 0.6);
+}
+
+.heading {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 1.5rem;
+}
+
+.text {
+  grid-column: 2 / 3;
+  font-size: 1.8rem;
+  letter-spacing: 0.6px;
+  column-width: 25rem;
+  text-align: justify;
+}
+
+@media only screen and (max-width: 720px) {
+  .image-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .text-with-images {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .hero-title {
+    font-size: 6rem;
+  }
+  
+  .text {
+    font-size: 1.6rem;
+  } 
+}
+
+@media only screen and (max-width: 420px) {
+  .hero-title {
+    font-size: 4.5rem;
+  }
