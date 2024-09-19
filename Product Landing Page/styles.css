@@ -1,9 +1,28 @@
-*,
-::before,
-::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:12rem;
+  background-color: rgb(20, 30, 40);
+  height: 70px; /* Added height for better vertical alignment */
+}
+
+#header-img {
+  width: 150px; /* Adjust logo size */
+}
+
+#nav-bar {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgb(20, 30, 40);
+  padding: 1rem 2rem;
+  box-shadow: none;
 }
 
 html {
@@ -17,21 +36,22 @@ body {
   background-color: rgb(20, 30, 40);
 }
 
-#nav-bar {
-  position: fixed; /* Stays fixed in the viewport */
-  top: 0; /* Aligns the nav-bar to the top */
-  left: 0; /* Aligns the nav-bar to the left */
-  width: 100%; /* Ensures the nav-bar spans the full width */
-  z-index: 1000; /* Keeps it above other elements */
-  background-color: #fff; /* Optional: Give it a background color */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+li {
+  text-align: left;
+  font-size: medium;
+  font-family: 'Baskervville', serif;
+  color: #e59e23;
+}
+
+.desc {
+  font-size: medium;
 }
 
 h1 {
   font-family: 'Anton', sans-serif;
 }
 
-h2, h3, h4, h5, h6 {
+h2, {
   font-family: 'Raleway', sans-serif;
 }
 
@@ -51,11 +71,6 @@ img {
   object-fit: cover;
 }
 
-hr {
-  margin: 1.5rem 0;
-  border: 1px solid rgba(120, 120, 120, 0.6);
-}
-
 .heading {
   grid-column: 2 / 3;
   display: grid;
@@ -71,23 +86,125 @@ hr {
   text-align: justify;
 }
 
-@media only screen and (max-width: 720px) {
-  .image-wrapper {
-    grid-template-columns: 1fr;
-  }
+.product {
+  text-align: center;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  background-color:dark-blue;
+  margin-bottom: 2rem;
+}
+
+.product h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#price {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background-color: #bc1010;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background-color: #ff6347;
+}
+
+.hero-button:hover {
+  background-color: #ff6347;
+}
+
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e59e23;
+  color: white;
+  height: 50vh;
+}
+
+.hero-title {
+  font-size: 6rem;
+  margin-bottom: 2rem;
+}
+
+.hero-button {
+  font-size: 2rem;
+  background-color: #bc1010;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+#options .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    align-items: start;
+}
+
+.container {
+  padding: 30px 0 0 0;
+}
+
+section {
+    padding: 4rem 2rem;
+}
+
+form {
+  color: white; 
+}
+
+footer {
+  background-color: #212020;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline;
+  margin: 0 1rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 600px) {
-  .text-with-images {
-    grid-template-columns: 1fr;
+  .hero-title {
+        font-size: 4rem;
+        text-align: center;
+    }
+  .hero-title {
+    font-size: 4rem;
   }
+
 }
 
 @media only screen and (max-width: 550px) {
-  .hero-title {
-    font-size: 6rem;
-  }
-  
   .text {
     font-size: 1.6rem;
   } 
